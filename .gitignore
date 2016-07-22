@@ -14,9 +14,6 @@ $RECYCLE.BIN/
 *.msm
 *.msp
 
-# Windows shortcuts
-*.lnk
-
 # =========================
 # Operating System Files
 # =========================
@@ -28,16 +25,16 @@ $RECYCLE.BIN/
 .AppleDouble
 .LSOverride
 
+# Icon must end with two \r
+Icon
+
+
 # Thumbnails
 ._*
 
-# Files that might appear in the root of a volume
-.DocumentRevisions-V100
-.fseventsd
+# Files that might appear on external disk
 .Spotlight-V100
-.TemporaryItems
 .Trashes
-.VolumeIcon.icns
 
 # Directories potentially created on remote AFP share
 .AppleDB
@@ -45,3 +42,12 @@ $RECYCLE.BIN/
 Network Trash Folder
 Temporary Items
 .apdisk
+
+/XFlixelTemplate/XFlixelTemplate/bin/*
+/XFlixelTemplate/XFlixelTemplate/obj/*
+/XFlixelTemplate/XFlixelTemplateContent/obj/x86/Debug/DesignTimeResolveAssemblyReferencesInput.cache
+/*.cachefile
+rollerderby/rollerderby/bin/*
+rollerderby/rollerderby/obj/*
+rollerderby/rollerderbyContent/obj/*
+rollerderby/rollerderby/*.cachefile
