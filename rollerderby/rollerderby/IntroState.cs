@@ -18,24 +18,15 @@ namespace RollerDerby
             FlxG.backColor = Color.Purple;
             base.create();
 
-            //FlxSprite testPattern = new FlxSprite(0, 0);
-            //testPattern.loadGraphic("flixel/diagnostic/checkerboard");
-            //add(testPattern);
-
-            //Logo logo = new Logo(0, 0);
-            //add(logo);
-
-
-
             for (int i = 0; i < 10; i++)
             {
-                FlxSprite spr = new FlxSprite(10 + i, 33+(i*20));
-                spr.loadGraphic("rollerskatergirl/rollergirl");
+                Rollergirl spr = new Rollergirl(10 + i, 33 + (i * 20));
                 add(spr);
-                spr.velocity.X = FlxU.random(20, 120);
+                spr.velocity.X = FlxU.random(55, 120);
             }
 
-
+            RollergirlPlayerControlled r = new RollergirlPlayerControlled(10, 55);
+            add(r);
 
 
         }

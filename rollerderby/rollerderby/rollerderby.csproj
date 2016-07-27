@@ -170,6 +170,8 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Game1.cs" />
+    <Compile Include="Rollergirl.cs" />
+    <Compile Include="RollergirlPlayerControlled.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Game.ico" />
@@ -188,10 +190,6 @@
     <ProjectReference Include="..\rollerderbyContent\rollerderbyContent.contentproj">
       <Project>{E3D7C5C9-FC6B-420C-9336-AB688A003887}</Project>
       <Name>rollerderbyContent %28Content%29</Name>
-      <XnaReferenceType>Content</XnaReferenceType>
-    </ProjectReference>
-    <ProjectReference Include="..\XFlixelTemplateContent\XFlixelTemplateContent.contentproj">
-      <Name>XFlixelTemplateContent</Name>
       <XnaReferenceType>Content</XnaReferenceType>
     </ProjectReference>
   </ItemGroup>
