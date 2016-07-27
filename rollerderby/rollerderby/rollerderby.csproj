@@ -165,6 +165,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Globals.cs" />
+    <Compile Include="Grid.cs" />
     <Compile Include="IntroState.cs" />
     <Compile Include="Logo.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -172,6 +173,7 @@
     <Compile Include="Game1.cs" />
     <Compile Include="Rollergirl.cs" />
     <Compile Include="RollergirlPlayerControlled.cs" />
+    <Compile Include="RollergirlsGroup.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Game.ico" />

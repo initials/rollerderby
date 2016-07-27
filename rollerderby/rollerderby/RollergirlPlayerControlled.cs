@@ -15,13 +15,19 @@ namespace RollerDerby
     class RollergirlPlayerControlled : Rollergirl
     {
 
+        private bool _hasTransitioned;
+
         public RollergirlPlayerControlled(int xPos, int yPos)
             : base(xPos, yPos)
         {
-            setDrags(125, 125);
+            setDrags(225, 225);
             maxVelocity.Y = maxVelocity.X = 240;
 
             facing = Flx2DFacing.Right;
+
+            
+
+            _hasTransitioned = false;
 
         }
 
@@ -30,6 +36,11 @@ namespace RollerDerby
         /// </summary>
         override public void update()
         {
+            //if (_hasTransitioned)
+            //    color = Color.Green;
+            //else
+            //    color = Color.Red;
+
             if (FlxControl.ACTIONJUSTPRESSED)
             {
                 velocity.X += 90;
@@ -52,20 +63,44 @@ namespace RollerDerby
             }
             if (FlxControl.LEFT)
             {
+                if (facing == Flx2DFacing.Right && _hasTransitioned)
+                {
+
+                }
+                else
+                {
+                    facing = Flx2DFacing.Left;
+                    _hasTransitioned = false;
+
+                }
+                
                 velocity.X -= movementValue;
             }
+
             if (FlxControl.RIGHT)
             {
+                if (facing == Flx2DFacing.Left && _hasTransitioned)
+                {
+
+                }
+                else
+                {
+                    facing = Flx2DFacing.Right;
+                    _hasTransitioned = false;
+
+                }
+
                 velocity.X += movementValue;
             }
-
 
             base.update();
         }
 
         private void transition()
         {
-            Console.WriteLine(facing);
+            //Console.WriteLine(facing);
+            _hasTransitioned = true;
+
 
             if (facing==Flx2DFacing.Left)
                 facing = Flx2DFacing.Right;

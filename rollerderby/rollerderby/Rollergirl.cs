@@ -17,6 +17,9 @@ namespace RollerDerby
         {
             loadGraphic("rollerskatergirl/rollergirl");
             scale = 0.5f;
+            
+            facing = Flx2DFacing.Right;
+
         }
 
         override public void update()
