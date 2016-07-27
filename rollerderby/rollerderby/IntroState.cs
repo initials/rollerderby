@@ -54,6 +54,11 @@ namespace RollerDerby
         {
             //rollergirls.update();
 
+            if (FlxG.keys.justPressed(Keys.B))
+            {
+                FlxG.showBounds = true;
+            }
+
             base.update();
         }
 

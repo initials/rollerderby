@@ -176,6 +176,7 @@
     <Compile Include="RollergirlsGroup.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="DerbyNames.txt" />
     <Content Include="Game.ico" />
     <Content Include="GAMESETTINGS.txt">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>

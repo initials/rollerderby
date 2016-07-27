@@ -15,10 +15,10 @@ namespace RollerDerby
         public Rollergirl(int xPos, int yPos)
             : base(xPos, yPos)
         {
-            loadGraphic("rollerskatergirl/rollergirl");
-            scale = 0.5f;
+            loadGraphic("rollerskatergirl/rollergirl_hs");
             
             facing = Flx2DFacing.Right;
+
 
         }
 
