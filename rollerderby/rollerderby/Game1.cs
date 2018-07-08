@@ -24,10 +24,10 @@ namespace Loader_RollerDerby
         //other variables
         private FlxGame _flixelgame;
 
-        //nothing much to see here, typical XNA initialization code
+        //nothing much to see here, typical XNA initialization codeF
         public FlxFactory()
         {
-            int div = 2;
+            int div = 4;
             FlxG.zoom = 2;
 
 #if ! DEBUG
