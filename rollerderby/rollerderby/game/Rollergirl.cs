@@ -11,6 +11,14 @@ namespace RollerDerby
 {
     class Rollergirl : FlxSprite
     {
+        private PushDirection currentPushDirection;
+
+        public enum PushDirection
+        {
+            Left = 0,
+            Right = 1,
+            None = 2
+        }
 
         public Rollergirl(int xPos, int yPos)
             : base(xPos, yPos)
@@ -26,13 +34,61 @@ namespace RollerDerby
             addAnimation("idle", new int[] { 0 }, 12, true);
 
             addAnimation("skate", new int[] { 0,1,2,2,2,0,3,4,4,4 }, FlxU.randomInt(4,10), true);
-            play("skate", true);
 
+            addAnimation("pushLeft", new int[] { 0, 3, 4, 4, 4 }, FlxU.randomInt(6, 9), false);
+            addAnimation("pushRight", new int[] { 0, 1, 2, 2, 2 }, FlxU.randomInt(6, 9), false);
+
+            addAnimation("spin", new int[] { 13,14,15,16,0}, 12, false);
+            addAnimation("jump", new int[] { 17,18,19,20 }, 24, false);
+
+            play("idle", true);
+
+            currentPushDirection = PushDirection.None;
+
+            drag.X = 150;
+            drag.Y = 150;
 
         }
 
         override public void update()
         {
+            if (FlxG.keys.justPressed(Keys.A))
+            {
+                currentPushDirection = PushDirection.Left;
+                this.velocity.X = 130 ;
+                play("pushLeft", false);
+
+            }
+            if (FlxG.keys.justPressed(Keys.D))
+            {
+                currentPushDirection = PushDirection.Right;
+                this.velocity.X = 130;
+                play("pushRight", false);
+            }
+            if (FlxG.keys.justPressed(Keys.R))
+            {
+                play("spin", false);
+            }
+            if (FlxG.keys.justPressed(Keys.Space))
+            {
+                play("jump", false);
+            }
+
+
+            //if (currentPushDirection == PushDirection.Left)
+            //{
+            //    play("pushLeft", false);
+            //}
+            //if (currentPushDirection == PushDirection.Right)
+            //{
+            //    play("pushRight", false);
+            //}
+            //if (currentPushDirection == PushDirection.None)
+            //{
+            //    play("idle", false);
+            //}
+
+
             base.update();
         }
 

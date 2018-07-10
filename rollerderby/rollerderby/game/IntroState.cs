@@ -27,12 +27,12 @@ namespace RollerDerby
             Grid g = new Grid(0, 0);
             add(g);
 
-            for (int i = 0; i < 10; i++)
+            for (int i = 0; i < 30; i++)
             {
-                rg = new Rollergirl(10 + i, 33 + (i * 30));
+                rg = new Rollergirl(10 + i, 33 + (i * 15));
                 rollergirls.add(rg);
 
-                rg.velocity.X = FlxU.random(45, 55);
+                rg.velocity.X = FlxU.random(35, 75);
                 rg.velocity.Y = FlxU.random(-15, 15);
 
             }
