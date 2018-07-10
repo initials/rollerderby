@@ -25,7 +25,7 @@ namespace RollerDerby
 
             addAnimation("idle", new int[] { 0 }, 12, true);
 
-            addAnimation("skate", new int[] { 0,1,2,2,2,0,3,4,4,4 }, 6, true);
+            addAnimation("skate", new int[] { 0,1,2,2,2,0,3,4,4,4 }, FlxU.randomInt(4,10), true);
             play("skate", true);
 
 
