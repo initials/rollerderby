@@ -33,7 +33,7 @@ namespace Loader_RollerDerby
 
             //initGame(w, h, new Island.IntroState(), new Color(15, 15, 15), true, new Color(5, 5, 5));
 
-            initGame(w, h, new RollerDerby.SkateState(), new Color(0, 0, 0), false, new Color(0, 0, 0));
+            initGame(w, h, new RollerDerby.HalfPipeState(), new Color(0, 0, 0), false, new Color(0, 0, 0));
 
 
             string buildType = "FULL";

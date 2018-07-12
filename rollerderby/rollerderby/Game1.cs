@@ -28,7 +28,7 @@ namespace Loader_RollerDerby
         public FlxFactory()
         {
             int div = 4;
-            FlxG.zoom = 2;
+            FlxG.zoom = 1;
 
 #if ! DEBUG
             FlxG.zoom = 4;
@@ -36,10 +36,11 @@ namespace Loader_RollerDerby
             FlxG.fullscreen = true;
 
 #endif
-            FlxG.resolutionWidth = GraphicsAdapter.DefaultAdapter.CurrentDisplayMode.Width / div;
-            FlxG.resolutionHeight = GraphicsAdapter.DefaultAdapter.CurrentDisplayMode.Height / div;
+            //FlxG.resolutionWidth = GraphicsAdapter.DefaultAdapter.CurrentDisplayMode.Width / div;
+            //FlxG.resolutionHeight = GraphicsAdapter.DefaultAdapter.CurrentDisplayMode.Height / div;
 
-
+            FlxG.resolutionWidth = 256;
+            FlxG.resolutionHeight = 256;
 
 
             //set up the graphics device and the content manager

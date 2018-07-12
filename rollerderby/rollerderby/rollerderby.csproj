@@ -164,7 +164,12 @@
     <Reference Include="System.Net" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="game\Bg.cs" />
+    <Compile Include="game\CollisionBlock.cs" />
+    <Compile Include="game\HalfPipeState.cs" />
+    <Compile Include="game\LaunchBlock.cs" />
     <Compile Include="game\SkateState.cs" />
+    <Compile Include="game\HalfPipeRollerGirl.cs" />
     <Compile Include="Globals.cs" />
     <Compile Include="game\Grid.cs" />
     <Compile Include="game\IntroState.cs" />
