@@ -14,6 +14,9 @@ namespace RollerDerby
         private PushDirection currentPushDirection;
         private Status currentStatus;
         private FlxPath path;
+
+        private const int SPEED = 125;
+
         public enum PushDirection
         {
             Left = 0,
@@ -73,7 +76,7 @@ namespace RollerDerby
 
             //followPath(path, 250, FlxSprite.PATH_LOOP_FORWARD, false);
             //startFollowingPath();
-            velocity.X = 75;
+            velocity.X = SPEED;
         }
 
         override public void update()
@@ -96,8 +99,28 @@ namespace RollerDerby
             //    velocity.X = 75;
             //}
 
+            if (FlxG.keys.justPressed(Keys.A))
+            {
+                facing = Flx2DFacing.Left;
 
-
+            }
+            if (FlxG.keys.justPressed(Keys.D))
+            {
+                facing = Flx2DFacing.Right;
+            }
+            if (y < 100 && FlxG.keys.W)
+            {
+                play("spin");
+            }
+            else if (y < 100)
+            {
+                play("jump");
+            }
+             
+            else
+            {
+                play("skate");
+            }
 
             base.update();
         }
@@ -129,7 +152,7 @@ namespace RollerDerby
             if (velocity.Y > 0)
             {
                 facing = Flx2DFacing.Right;
-                velocity.X = 75;
+                velocity.X = SPEED;
             }
 
         }
@@ -146,7 +169,7 @@ namespace RollerDerby
             if (velocity.Y > 0)
             {
                 facing = Flx2DFacing.Left;
-                velocity.X = -75;
+                velocity.X = SPEED * -1;
             }
 
         }
@@ -194,7 +217,14 @@ namespace RollerDerby
 
             if (((LaunchBlock)(obj)).direction == this.facing)
             {
-                velocity.Y -= 15;
+                velocity.Y -= 45;
+            }
+            else
+            {
+                if (x < 120)
+                    velocity.X = SPEED;
+                else
+                    velocity.X = SPEED * -1;
             }
         }
     }

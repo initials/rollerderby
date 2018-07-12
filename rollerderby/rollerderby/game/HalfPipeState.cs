@@ -36,14 +36,14 @@ namespace RollerDerby
             collisionBlocks = new FlxGroup();
             add(collisionBlocks);
 
-            CollisionBlock c = new CollisionBlock(20, 100);
+            CollisionBlock c = new CollisionBlock(20, 0);
             c.width = 30;
-            c.height = 100;
+            c.height = 200;
             collisionBlocks.add(c);
 
-            c = new CollisionBlock(210, 100);
+            c = new CollisionBlock(210, 0);
             c.width = 30;
-            c.height = 100;
+            c.height = 200;
             collisionBlocks.add(c);
 
             c = new CollisionBlock(20, 200);
