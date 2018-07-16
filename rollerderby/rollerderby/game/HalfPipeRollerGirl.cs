@@ -217,7 +217,13 @@ namespace RollerDerby
 
             if (((LaunchBlock)(obj)).direction == this.facing)
             {
-                velocity.Y -= 45;
+                if (velocity.Y >= 0)
+                    velocity.Y -= 5;
+                else if (velocity.Y <= -125)
+                    velocity.Y -= 25;
+                else
+                    velocity.Y -= 45;
+
             }
             else
             {
